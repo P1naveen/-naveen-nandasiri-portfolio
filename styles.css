@@ -8,4 +8,28 @@
 .portrait-wrap{width:100%;max-width:400px;justify-self:center}
 .portrait-frame{transform:none}
 .portrait-frame img{object-position:center 15%}
+
+/* Technical toolkit — grouped dashboard treatment */
+.toolkit-heading{display:flex;align-items:end;justify-content:space-between;gap:44px}
+.toolkit-heading>p{max-width:430px;margin:0 0 8px;color:var(--muted)}
+.toolkit-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:28px;border:1px solid rgba(77,163,255,.13);border-radius:30px;background-color:rgba(8,14,24,.75);background-image:radial-gradient(rgba(77,163,255,.2) 1px,transparent 1px);background-size:22px 22px;overflow:hidden}
+.toolkit-grid::before{content:"";position:absolute;width:420px;height:420px;right:-170px;top:-190px;border-radius:50%;background:rgba(54,225,209,.07);filter:blur(65px);pointer-events:none}
+.toolkit-group{position:relative;min-width:0;padding:25px;background:linear-gradient(145deg,rgba(17,27,45,.96),rgba(11,18,31,.96));border:1px solid rgba(161,184,220,.17);border-radius:22px;box-shadow:0 18px 45px rgba(0,0,0,.18);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.toolkit-group:hover{transform:translateY(-4px);border-color:rgba(77,163,255,.42);box-shadow:0 24px 55px rgba(0,0,0,.28),0 0 0 1px rgba(77,163,255,.05) inset}
+.toolkit-group-wide{grid-column:span 2}
+.toolkit-group header{display:flex;align-items:center;gap:12px;padding-bottom:18px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.toolkit-group header>span{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:rgba(77,163,255,.1);border:1px solid rgba(77,163,255,.18);color:var(--blue);font:800 .68rem "Manrope",sans-serif}
+.toolkit-group h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:#b8c6da}
+.tool-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.toolkit-group-wide .tool-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tool-item{min-width:0;min-height:102px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:14px 10px;border:1px solid rgba(161,184,220,.14);border-radius:15px;background:rgba(255,255,255,.025);transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.tool-item:hover{transform:translateY(-2px);background:rgba(77,163,255,.08);border-color:rgba(77,163,255,.4)}
+.tool-item img{width:38px;height:38px;object-fit:contain}
+.tool-item img.icon-light{filter:invert(1) grayscale(1)}
+.tool-item span{max-width:100%;color:#c7d3e3;font-size:.76rem;font-weight:600;line-height:1.25;text-align:center}
+.tool-item-text b{display:grid;place-items:center;min-width:42px;height:38px;padding:0 8px;border-radius:10px;background:linear-gradient(135deg,rgba(77,163,255,.2),rgba(54,225,209,.12));color:#73c5ff;font:800 .72rem "Manrope",sans-serif;letter-spacing:.04em}
+
+@media(max-width:980px){.toolkit-grid{grid-template-columns:repeat(2,1fr)}.toolkit-group-wide{grid-column:span 2}.toolkit-heading{align-items:flex-start;flex-direction:column;gap:18px}}
+@media(max-width:680px){.toolkit-grid{grid-template-columns:1fr;padding:15px}.toolkit-group,.toolkit-group-wide{grid-column:auto;padding:20px}.toolkit-group-wide .tool-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.toolkit-group,.tool-item{transition:none}}
 .portrait-caption{transform:none}
