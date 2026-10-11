@@ -37,11 +37,11 @@
 /* Branded education and experience timeline */
 .timeline-main{display:grid;grid-template-columns:76px minmax(0,1fr);gap:22px;align-items:start}
 .timeline-logo{position:relative;width:68px;height:68px;display:grid;place-items:center;padding:8px;border:1px solid rgba(161,184,220,.18);border-radius:18px;background:#fff;box-shadow:0 14px 34px rgba(0,0,0,.22);overflow:hidden}
-.timeline-logo img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;background:#fff}
+.timeline-logo img{position:absolute;z-index:1;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);object-fit:contain}
 .logo-fallback{position:absolute;inset:0;display:grid;place-items:center;color:#173965;font:800 .74rem "Manrope",sans-serif;letter-spacing:-.03em}
 .logo-fallback span{color:#45a9e8}
 .timeline-logo-round img{border-radius:50%}
-.timeline-logo-wide img{width:112%;height:auto}
+.timeline-logo-wide img{inset:17px 5px;width:calc(100% - 10px);height:calc(100% - 34px)}
 
 /* Expanded verified credentials */
 .credential-heading>p{max-width:460px;color:var(--muted);margin:0}
@@ -50,15 +50,19 @@
 .credential-provider>div{display:flex;align-items:center;gap:16px}
 .credential-provider p{margin:0 0 2px;color:#8798ad;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 .credential-provider h3{font-size:1.05rem}
-.provider-mark{display:grid;place-items:center;width:58px;height:42px;border-radius:12px;font:800 .7rem "Manrope",sans-serif;letter-spacing:.04em}
-.aws-provider{background:#ff992f;color:#10141c}
-.cisco-provider{background:#00bceb;color:#04121a}
+.provider-mark{display:grid;place-items:center;width:136px;height:54px;padding:9px 12px;border-radius:12px;background:#fff;overflow:hidden}
+.provider-mark img{width:100%;height:100%;object-fit:contain}
+.aws-provider{box-shadow:inset 0 0 0 1px rgba(255,153,47,.18)}
+.cisco-provider{box-shadow:inset 0 0 0 1px rgba(0,188,235,.18)}
 .credential-card{position:relative;min-height:122px;transition:transform .22s ease,border-color .22s ease,background .22s ease}
 .credential-card:hover{transform:translateY(-3px);border-color:rgba(77,163,255,.38);background:var(--panel-2)}
 .credential-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .credential-card span{transition:color .2s ease}
 .credential-card:hover span{color:#d6e8ff}
-.badge-mark-cisco{background:linear-gradient(145deg,#54d1ef,#00a0d2);color:#03141c;font-size:.61rem}
+.badge-mark-logo{padding:17px 9px}
+.badge-mark-logo img{width:100%;height:100%;object-fit:contain}
+.badge-mark-aws{background:linear-gradient(145deg,#fff4e8,#ffd9ad)}
+.badge-mark-cisco{background:linear-gradient(145deg,#eafaff,#bcefff)}
 .badge-mark-certificate{background:linear-gradient(145deg,#437dff,#705cff);color:#fff}
 .credential-card-certificate{border-color:rgba(112,92,255,.3);background:linear-gradient(145deg,rgba(63,80,161,.16),var(--panel))}
 
