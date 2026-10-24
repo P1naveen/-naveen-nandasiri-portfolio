@@ -165,3 +165,17 @@
 @media(max-width:980px){.research-showcase{grid-template-columns:1fr}.paper-preview{min-height:auto;padding:45px}.paper-preview img{width:min(100%,430px)}.research-content{padding:42px}.project-gallery{height:235px}}
 @media(max-width:680px){.about-proof{grid-template-columns:1fr}.focus-map{min-height:285px}.focus-node-ml{left:0}.focus-node-api{right:0}.focus-node-cloud{right:1%}.focus-node-sec{left:0}.focus-flow{gap:5px}.focus-flow i{width:10px}.project-card-media{padding:0}.project-card-body{padding:27px 23px 29px}.project-gallery{height:220px}.project-gallery-school{grid-template-columns:1fr 1fr}.research-showcase{border-radius:22px}.paper-preview{padding:35px 24px}.research-content{padding:30px 23px}.research-metrics{grid-template-columns:1fr}.research-actions{flex-direction:column}.research-actions .button{width:100%}}
 @media(prefers-reduced-motion:reduce){.paper-preview img,.project-gallery img{transition:none}}
+
+/* Project numbering — separated from headings to avoid overlap */
+.project-card-kicker{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:42px}
+.project-card-kicker .mini-label{margin:0}
+.project-card-body .card-index{position:static;flex:none;color:#41526d;font:800 2.45rem/1 "Manrope",sans-serif;letter-spacing:-.06em}
+
+/* Precision cursor — desktop pointer devices only */
+.cursor-dot,.cursor-ring{position:fixed;left:0;top:0;z-index:9999;pointer-events:none;border-radius:50%;opacity:0;transform:translate(-50%,-50%);transition:width .18s ease,height .18s ease,border-color .18s ease,background .18s ease,opacity .18s ease}
+.cursor-dot{width:6px;height:6px;background:#65e8ff;box-shadow:0 0 12px rgba(101,232,255,.95)}
+.cursor-ring{width:34px;height:34px;border:1px solid rgba(77,163,255,.85);background:rgba(77,163,255,.08);box-shadow:0 0 22px rgba(77,163,255,.18)}
+.cursor-dot.is-visible,.cursor-ring.is-visible{opacity:1}
+.cursor-ring.is-active{width:48px;height:48px;border-color:rgba(54,225,209,.95);background:rgba(54,225,209,.1)}
+@media(pointer:fine){html.cursor-ready,html.cursor-ready *{cursor:none!important}}
+@media(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-dot,.cursor-ring{display:none!important}}
