@@ -1,0 +1,32 @@
+PORTFOLIO UPDATE — RESEARCH, PROJECT IMAGES, ABOUT, AND CISCO BADGES
+
+Files to upload to the ROOT of your GitHub repository:
+
+1. index.html
+2. styles.css
+3. TrackVision-IEEE-Paper.pdf
+4. trackvision-paper-first-page.webp
+5. airline-ticket-booking.webp
+6. school-management-er-diagram.webp
+7. school-management-relational-schema.webp
+
+GitHub upload steps:
+
+1. Open:
+   https://github.com/P1naveen/-naveen-nandasiri-portfolio/upload/main
+2. Extract the ZIP file on your computer.
+3. Drag the seven files listed above into the GitHub upload area.
+4. If GitHub warns that index.html and styles.css already exist, keep the new
+   versions so that they replace the old versions.
+5. Enter this commit message:
+   Add IEEE research, project galleries and Cisco badges
+6. Click "Commit changes".
+7. Wait about 1–3 minutes for Vercel to redeploy automatically.
+8. Open your portfolio and press Ctrl+F5 to refresh it fully.
+
+Important:
+- Keep all seven files in the repository root, next to index.html.
+- Do not rename the PDF or image files because index.html uses these exact names.
+- The Cisco badge cards currently verify through your public Credly badge
+  profile, matching the verification method used by the existing badge cards.
+- The Packet Tracer certificate keeps its separate NetAcad verification link.
